@@ -2,6 +2,7 @@
 - 👀 I’m interested in software and aı
 - 🌱 I’m currently learning java and machine learning
 - 📫 How to reach me : whodenur@gmail.com
+- Fırat yazılım oryantasyon sınav için YouTube linki : https://youtube.com/playlist?list=PL1yTMGVhPs_mI1m6VKGkSdNuCvyIhXd-V&si=_vc4u3U4A8o_v6lL
 
 <!---
 whodenur24/whodenur24 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
