@@ -22,7 +22,6 @@
 - 🏆 Turkcell Codenight All Star ve İHH Atom Hackathon gibi yarışma/kamp deneyimlerim var
 - 🔐 Offensive security ve OWASP Top 10 üzerine çalışıyorum
 - 🚀 Yeni teknolojiler denemeyi ve fikirleri hızlıca prototipe dökmeyi seviyorum
-- ⚖️ Uzun vadede kendi şirketimi kurmak ve hukuk eğitimi almak gibi hedeflerim var
 - 🌐 Projelerimi ve çalışmalarımı [sudenurozturk.com](https://www.sudenurozturk.com) adresinde paylaşıyorum
 
 ---
