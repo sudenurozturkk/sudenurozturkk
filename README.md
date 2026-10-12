@@ -8,7 +8,7 @@
   <a href="mailto:whodenur@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://www.sudenurozturk.com">
+  <a href="https://www.sudenurozturk.tr">
     <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
@@ -22,7 +22,7 @@
 - 🏆 Turkcell Codenight All Star ve İHH Atom Hackathon gibi yarışma/kamp deneyimlerim var
 - 🔐 Offensive security ve OWASP Top 10 üzerine çalışıyorum
 - 🚀 Yeni teknolojiler denemeyi ve fikirleri hızlıca prototipe dökmeyi seviyorum
-- 🌐 Projelerimi ve çalışmalarımı [sudenurozturk.com](https://www.sudenurozturk.com) adresinde paylaşıyorum
+- 🌐 Projelerimi ve çalışmalarımı [sudenurozturk.tr](https://www.sudenurozturk.tr) adresinde paylaşıyorum
 
 ---
 
