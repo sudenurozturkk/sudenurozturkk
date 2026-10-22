@@ -1,77 +1,44 @@
-<h1 align="center">Merhaba, ben Sudenur Öztürk 👋</h1>
-<h3 align="center">Software Engineering Student @ Fırat Üniversitesi | AI & Full-Stack Developer</h3>
-
 <p align="center">
-  <a href="https://linkedin.com/in/sudenurozturk">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:whodenur@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://www.sudenurozturk.tr">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-</p>
-
----
-
-### 🧠 Hakkımda
-
-- 🎓 Fırat Üniversitesi, Yazılım Mühendisliği bölümü öğrencisiyim
-- 🤖 Şu anda RAG sistemleri, çoklu-ajan (multi-agent) mimariler ve LLM tabanlı uygulamalar üzerine yoğunlaşıyorum
-- 🏆 Turkcell Codenight All Star ve İHH Atom Hackathon gibi yarışma/kamp deneyimlerim var
-- 🔐 Offensive security ve OWASP Top 10 üzerine çalışıyorum
-- 🚀 Yeni teknolojiler denemeyi ve fikirleri hızlıca prototipe dökmeyi seviyorum
-- 🌐 Projelerimi ve çalışmalarımı [sudenurozturk.tr](https://www.sudenurozturk.tr) adresinde paylaşıyorum
-
----
-
-### 🛠️ Öne Çıkan Projeler
-
-| Proje | Açıklama |
-|---|---|
-| **[CampaignCell](https://github.com/sudenurozturkk/campaigncell)** | Turkcell Codenight All Star'da bir gecede geliştirilen, abonelere kişiselleştirilmiş kampanya/teklif öneren platform |
-| **İHH Genç Raporlama** | İHH Atom Hackathon kampında geliştirilen [karne/raporlama uygulaması](https://genc-ihh-raporlama-kpjy-iota.vercel.app/karne/25?year=2026) |
-| **RAG Tabanlı İlaç Bilgi Asistanı** | Next.js 14 + TypeScript + better-sqlite3 + Microsoft Foundry Local ile geliştirilen, yerel çalışan RAG mimarili staj projesi |
-
-<p align="center">
-  <a href="https://github.com/sudenurozturkk/FitTurkAI">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=sudenurozturkk&repo=FitTurkAI&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/sudenurozturkk/DiyetisyenOtomasyonu">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=sudenurozturkk&repo=DiyetisyenOtomasyonu&theme=tokyonight&hide_border=true" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/sudenurozturkk/KisiselAiFinansAsistani">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=sudenurozturkk&repo=KisiselAiFinansAsistani&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/sudenurozturkk/SMARTRENTVAULT">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=sudenurozturkk&repo=SMARTRENTVAULT&theme=tokyonight&hide_border=true" />
-  </a>
-</p>
-
----
-
-### 💻 Diller ve Araçlar
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=cpp,html,css,js,ts,react,nodejs,mongodb,mysql,postgres,tailwind,bootstrap,figma,firebase,gcp,flutter,git,github" />
-</p>
-
----
-
-### 📊 GitHub İstatistikleri
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=sudenurozturkk&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=sudenurozturkk&theme=tokyonight&hide_border=true" />
+  <img src="hero.png" alt="Sudenur Öztürk — kırılma haritası" width="100%">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sudenurozturkk&layout=compact&theme=tokyonight&hide_border=true" />
+  <img src="dist/seismo.svg" alt="Katkı sismografı" width="100%">
 </p>
 
----
+### Hakkımda
 
-<p align="center"><i>"I am a developer who loves development with a passion."</i></p>
+Yazılım mühendisliği öğrencisiyim (Fırat Üniversitesi). Yapay zekâ ürünleri geliştiriyorum, siber güvenlikle uğraşıyorum; sistemlerin nasıl çalıştığıyla ve **nerede kırıldığıyla** ilgileniyorum. İlk CTF'imi SQL injection ile çözdüm.
+
+> *"Bu neden böyle? Peki ya şöyle olursa ne olur?"*
+
+**Şu an:** yazılım stüdyom [Whodenur](https://www.whodenur.com)'u kuruyorum · yapay zekâ ve güvenlik üzerine çalışıyorum
+
+### Projeler
+
+| Proje | Ne yapıyor | Teknoloji |
+|---|---|---|
+| **GENÇ İHH Raporlama** | AI destekli saha raporlama: rol bazlı erişim, değiştirilemez rapor arşivi, Türkiye haritası, AI özetleri. İHH ATOM Hackathon | Next.js 16 · React 19 · Prisma · PostgreSQL · Claude |
+| **CampaignCell** | Kişiselleştirilmiş kampanya platformu, 4 mikroservis + API Gateway, segmentasyon ve dönüşüm tahmini. Turkcell CodeNight All Star | NestJS · FastAPI · RabbitMQ · scikit-learn · Docker |
+| **İlaç Rehberi Asistanı** | Tamamen offline RAG ilaç rehberi: hibrit arama, zorunlu kaynak gösterimi, sesli soru, etkileşim kontrolü. Microsoft stajı | Next.js 15 · SQLite · Foundry Local · Whisper |
+| **SürüCep** | Küçük besiciler için offline-first PWA: aşı, doğum, tedavi, süt kaydı ve ilaçlı sütün satışını engelleyen uyarılar | React · TypeScript · PWA |
+| **KulüpOS** | Hacktoberfest Elazığ 2026 için tek başıma geliştirdiğim kulüp yönetim uygulaması | Gemma (açık model) |
+| **AI Finans Asistanı** | Anomali tespiti, 30 günlük tahmin, senaryo simülasyonu yapan agentic finans danışmanı | Next.js · Gemini · TypeScript |
+| **SmartRentVault** | 48 saatte yazılan merkeziyetsiz kira/depozito dApp'i: escrow, puanlama, cüzdan entegrasyonu. HackStellar | Rust · Soroban · Stellar · React |
+| **DiyetPro** | Diyetisyen hasta takip masaüstü uygulaması; hazır framework olmadan katmanlı mimari ve kendi DI container'ı | C# · .NET 4.8 · DevExpress · MySQL |
+| **FitTurkAI** | Türkçe sağlık ve fitness takip asistanı | Next.js · FastAPI · Hugging Face |
+| **QR Menü** | Diyarbakır'da bir kafe için gönüllü dijital menü | HTML · CSS · JavaScript |
+
+### Yol haritası
+
+- **2026** · Erasmus+ Polonya (Częstochowa) · Microsoft AI Innovators stajı · BTK stajı · CodeNight All Star finali · İHH ATOM Hackathon · SummerBytes saldırgan güvenlik kampı · Erasmus+ Muş projesi
+- **2025** · Paribu Codex 4.'lüğü · CodeNight Diyarbakır 2.'liği · HackStellar · MCP Bootcamp · AI Security eğitimi · FÜBET etkinlik koordinatörlüğü
+- **2025 başı** · GSB Yapay Zekâ Kış Kampı, ByteGirls takım kaptanı (20 takım arasında ilk 8)
+
+### Araç çantası
+
+`TypeScript` `Next.js` `React` `Python` `Java` `C# / .NET` `Rust` `PostgreSQL` `Docker` `RabbitMQ` `RAG / LLM` `Hugging Face` `OWASP` `CTF`
+
+### İletişim
+
+[sudenurozturk.tr](https://www.sudenurozturk.tr) · [whodenur.com](https://www.whodenur.com) · [Hugging Face](https://huggingface.co/sudenurozturk) · [LinkedIn](https://linkedin.com/in/sudenurozturk) · whodenur@gmail.com
