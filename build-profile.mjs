@@ -336,7 +336,7 @@ function readme(lang) {
 </p>
 
 <p align="center">
-  <img src="dist/seismo.svg" alt="${en ? "Contribution seismograph" : "Katkı sismografı"}" width="100%">
+  <img src="${d}/seismo.svg" alt="${en ? "Contribution seismograph" : "Katkı sismografı"}" width="100%">
 </p>
 
 <p align="center">

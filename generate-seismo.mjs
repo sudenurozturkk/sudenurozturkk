@@ -8,6 +8,7 @@ const USER = process.env.GH_USERNAME, TOKEN = process.env.GH_TOKEN || process.en
 const OUT = process.env.OUTPUT_PATH || "dist/seismo.svg";
 
 async function days() {
+  if (process.env.DATA_FILE) return JSON.parse(fs.readFileSync(process.env.DATA_FILE, "utf8"));
   if (process.env.MOCK === "1") {
     return Array.from({ length: 371 }, (_, i) => (Math.random() < 0.5 ? 0 : Math.floor(Math.random() ** 2 * 16)));
   }
@@ -26,14 +27,14 @@ async function days() {
 }
 
 const W = 1200, H = 200, X0 = 40, X1 = 1160, BASE = 112, MAXH = 74, LOOP = 14;
-const BG = "#09060d", DIM = "#7a6b7c", PINK = "#ff7ab8";
-const STOPS = [[0, [77, 163, 255]], [.4, [155, 107, 255]], [.75, [255, 122, 184]], [1, [255, 45, 85]]];
+const BG = "#05050b", DIM = "#8b8ba6", PINK = "#f07aa6", LINE = "#1c1c2c";
+const STOPS = [[0, [110, 90, 200]], [.4, [167, 139, 250]], [.75, [240, 122, 166]], [1, [255, 77, 109]]];
 const ramp = (t) => {
   for (let i = 1; i < STOPS.length; i++) if (t <= STOPS[i][0]) {
     const [t0, a] = STOPS[i - 1], [t1, b] = STOPS[i], u = (t - t0) / (t1 - t0);
     return `rgb(${a.map((v, k) => Math.round(v + (b[k] - v) * u)).join(",")})`;
   }
-  return "rgb(255,45,85)";
+  return "rgb(255,77,109)";
 };
 
 const data = await days();
@@ -43,25 +44,33 @@ let ticks = "";
 data.forEach((c, i) => {
   const x = (X0 + i * dx + dx / 2).toFixed(2);
   const h = c === 0 ? 3 : 8 + Math.sqrt(c / max) * (MAXH - 8);
-  ticks += `<line x1="${x}" x2="${x}" y1="${(BASE - h).toFixed(1)}" y2="${(BASE + h * 0.33).toFixed(1)}" stroke="${c === 0 ? "#6b4a8a" : ramp(c / max)}" stroke-width="2" stroke-linecap="round"/>`;
+  ticks += `<line x1="${x}" x2="${x}" y1="${(BASE - h).toFixed(1)}" y2="${(BASE + h * 0.33).toFixed(1)}" stroke="${c === 0 ? "#3a3358" : ramp(c / max)}" stroke-width="2" stroke-linecap="round"/>`;
 });
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Katkı sismografı">
+const build = (L) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${L.aria}">
 <defs>
 <clipPath id="sweep"><rect x="0" y="0" width="0" height="${H}"><animate attributeName="width" values="0;${W};${W}" keyTimes="0;.85;1" dur="${LOOP}s" repeatCount="indefinite"/></rect></clipPath>
 <g id="t">${ticks}</g>
 </defs>
 <rect width="${W}" height="${H}" rx="14" fill="${BG}"/>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="${LINE}"/>
 <line x1="${X0}" x2="${X1}" y1="${BASE}" y2="${BASE}" stroke="#ffffff" stroke-opacity=".12"/>
 <use href="#t" opacity=".3"/>
 <use href="#t" clip-path="url(#sweep)"/>
 <line y1="30" y2="${BASE + 40}" stroke="${PINK}" stroke-width="2"><animate attributeName="x1" values="0;${W};${W}" keyTimes="0;.85;1" dur="${LOOP}s" repeatCount="indefinite"/><animate attributeName="x2" values="0;${W};${W}" keyTimes="0;.85;1" dur="${LOOP}s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.84;.86;1" dur="${LOOP}s" repeatCount="indefinite"/></line>
 <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="${DIM}">
-<text x="${X0}" y="32">SİSMOGRAF · son 12 ay</text>
-<text x="${X1}" y="32" text-anchor="end">${total} katkı · en yoğun gün ${max}</text>
-<text x="${X0}" y="${H - 24}">bu neden böyle? peki ya şöyle olursa?</text>
+<text x="${X0}" y="32">${L.title}</text>
+<text x="${X1}" y="32" text-anchor="end">${L.stat}</text>
+<text x="${X0}" y="${H - 24}">${L.motto}</text>
 </g></svg>
 `;
-fs.mkdirSync(path.dirname(OUT), { recursive: true });
-fs.writeFileSync(OUT, svg);
-console.log("yazıldı:", OUT, `(${total} katkı)`);
+
+const LABELS = {
+  en: { aria: "Contribution seismograph", title: "SEISMOGRAPH · last 12 months", stat: `${total} contributions · busiest day ${max}`, motto: "why is it like this? what happens if…?" },
+  tr: { aria: "Katkı sismografı", title: "SİSMOGRAF · son 12 ay", stat: `${total} katkı · en yoğun gün ${max}`, motto: "bu neden böyle? peki ya şöyle olursa?" },
+};
+const OUT_TR = path.join(path.dirname(OUT), "tr", path.basename(OUT));
+fs.mkdirSync(path.dirname(OUT_TR), { recursive: true });
+fs.writeFileSync(OUT, build(LABELS.en));
+fs.writeFileSync(OUT_TR, build(LABELS.tr));
+console.log("yazıldı:", OUT, "ve", OUT_TR, `(${total} katkı)`);

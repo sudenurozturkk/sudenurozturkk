@@ -23,4 +23,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: sismograf güncellendi"
-          file_pattern: dist/seismo.svg
+          file_pattern: dist/seismo.svg dist/tr/seismo.svg

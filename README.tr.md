@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="dist/seismo.svg" alt="Katkı sismografı" width="100%">
+  <img src="dist/tr/seismo.svg" alt="Katkı sismografı" width="100%">
 </p>
 
 <p align="center">
