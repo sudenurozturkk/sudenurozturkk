@@ -60,6 +60,50 @@ function ticker(items, w, y, h, { speed = 38, size = 13 } = {}) {
 <g clip-path="url(#${cid})"><g>${mk(0)}${mk(tw)}<animateTransform attributeName="transform" type="translate" from="0 0" to="${-tw} 0" dur="${(tw / speed).toFixed(1)}s" repeatCount="indefinite"/></g></g>`;
 }
 
+// ───────────────────────── FOTOĞRAF KARTI (sudenurozturk.tr hero kartı) ─────────────────────────
+const b64 = (f) => fs.readFileSync(new URL(`./assets/${f}`, import.meta.url)).toString("base64");
+function photoCard() {
+  const holo = ["#ff7a75", "#ffed61", "#a8ff61", "#85fff7", "#7a95ff", "#d875ff", "#ff7a75"];
+  const stops = holo.map((c, i) => `<stop offset="${(i / (holo.length - 1)).toFixed(2)}" stop-color="${c}"/>`).join("");
+  const cta = LANG === "en" ? "Contact" : "İletişim";
+  return `<defs>
+<linearGradient id="holo" x1="0" y1="0" x2="1" y2="1" spreadMethod="reflect">${stops}<animateTransform attributeName="gradientTransform" type="translate" values="-0.6 -0.3;0.6 0.3;-0.6 -0.3" dur="6s" repeatCount="indefinite"/></linearGradient>
+<linearGradient id="holoSoft" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">${stops}<animateTransform attributeName="gradientTransform" type="translate" values="-0.5 0;0.5 0;-0.5 0" dur="7s" repeatCount="indefinite"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.62" stop-color="#05050b" stop-opacity="0"/><stop offset="1" stop-color="#05050b" stop-opacity="0.55"/></linearGradient>
+<clipPath id="ph"><rect x="10" y="10" width="220" height="190" rx="20"/></clipPath>
+<clipPath id="av"><circle cx="32" cy="228" r="16"/></clipPath>
+<radialGradient id="cardGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7a95ff" stop-opacity="0.35"/><stop offset="0.6" stop-color="#d875ff" stop-opacity="0.14"/><stop offset="1" stop-color="#d875ff" stop-opacity="0"/></radialGradient>
+</defs>
+<g transform="translate(844 183)">
+<ellipse rx="170" ry="170" fill="url(#cardGlow)"><animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite"/></ellipse>
+<circle r="148" fill="none" stroke="${C.pink}" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="2 9" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="46s" repeatCount="indefinite"/></circle>
+<circle r="124" fill="none" stroke="${C.violet}" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="1 6" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="32s" repeatCount="indefinite"/></circle>
+</g>
+<g opacity="0">${appear(1.6, 0.8)}
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+<g transform="translate(724 56)">
+<g><animateTransform attributeName="transform" type="rotate" values="-1.4 120 127;1.4 120 127;-1.4 120 127" dur="6s" repeatCount="indefinite"/>
+<rect x="-3" y="-3" width="246" height="260" rx="31" fill="url(#holo)" opacity="0.9"/>
+<rect width="240" height="254" rx="28" fill="${C.surface}"/>
+<rect x="1" y="1" width="238" height="252" rx="27" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+<g clip-path="url(#ph)">
+<rect x="10" y="10" width="220" height="190" fill="#14141f"/>
+<image x="10" y="10" width="220" height="190" preserveAspectRatio="xMidYMin slice" href="data:image/jpeg;base64,${b64("me-card.jpg")}"/>
+<rect x="10" y="10" width="220" height="190" fill="url(#fade)"/>
+<rect x="-90" y="0" width="70" height="220" fill="url(#shine)" transform="skewX(-18)"><animate attributeName="x" values="-90;330;330" keyTimes="0;0.45;1" dur="4.5s" repeatCount="indefinite"/></rect>
+</g>
+<rect x="10" y="10" width="220" height="190" rx="20" fill="none" stroke="url(#holoSoft)" stroke-opacity="0.55"/>
+<circle cx="32" cy="228" r="18.5" fill="url(#holo)"/>
+<image x="16" y="212" width="32" height="32" preserveAspectRatio="xMidYMid slice" clip-path="url(#av)" href="data:image/jpeg;base64,${b64("me-mini.jpg")}"/>
+<text x="58" y="224" font-family="${SANS}" font-size="13" font-weight="700" fill="${C.text}">whodenur_</text>
+<text x="58" y="239" font-family="${MONO}" font-size="9.5" fill="${C.muted}">@sudenurozturk</text>
+<rect x="158" y="216" width="66" height="24" rx="12" fill="url(#holoSoft)"/>
+<rect x="159" y="217" width="64" height="22" rx="11" fill="${C.bg}" fill-opacity="0.82"/>
+<text x="191" y="232" text-anchor="middle" font-family="${MONO}" font-size="10.5" font-weight="700" fill="${C.text}">${cta}</text>
+</g></g></g></g>`;
+}
+
 // ───────────────────────── BANNER ─────────────────────────
 function banner() {
   const W = 1000, H = 372;
@@ -104,16 +148,7 @@ ${roleEls}
 <text x="36" y="262" font-family="${MONO}" font-size="13" fill="${C.muted}" opacity="0">${appear(2.6)}$ echo $MOTTO</text>
 <text x="36" y="292" font-family="${SANS}" font-size="19" font-style="italic" fill="${C.text}" opacity="0">${appear(3.0, 0.8)}${esc(motto)}</text>
 
-<g transform="translate(860 176)">
-<circle r="104" fill="none" stroke="${C.pink}" stroke-opacity="0.75" stroke-width="1.5" stroke-dasharray="2 9" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="46s" repeatCount="indefinite"/></circle>
-<circle r="78" fill="none" stroke="${C.violet}" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="1 6" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="32s" repeatCount="indefinite"/></circle>
-<circle r="52" fill="none" stroke="${C.green}" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="16 9"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/></circle>
-<circle r="26" fill="none" stroke="${C.border}" stroke-width="1.5"/>
-<circle r="5" fill="${C.pink}"/>
-<circle r="5" fill="none" stroke="${C.pink}" stroke-width="1.5"><animate attributeName="r" values="5;30" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="2.6s" repeatCount="indefinite"/></circle>
-<path d="M-110 26 L-62 -22 L-40 6 L0 -44 L22 -10 L70 -46 L112 -4" fill="none" stroke="${C.red}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="420" stroke-dashoffset="420">
-<animate attributeName="stroke-dashoffset" values="420;0;0;0;420" keyTimes="0;0.2;0.7;0.9;1" dur="7s" begin="3s" repeatCount="indefinite"/></path>
-</g>
+${photoCard()}
 
 ${ticker(["born at hackathons", "ship products that work", "secure by design", "whodenur_", "Fırat Üniversitesi", LANG === "en" ? "Erasmus+ Poland" : "Erasmus+ Polonya", "$ sudo hire whodenur"], W, H - 44, 44)}
 </g>
