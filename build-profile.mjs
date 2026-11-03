@@ -65,14 +65,12 @@ const b64 = (f) => fs.readFileSync(new URL(`./assets/${f}`, import.meta.url)).to
 function photoCard() {
   const holo = ["#ff7a75", "#ffed61", "#a8ff61", "#85fff7", "#7a95ff", "#d875ff", "#ff7a75"];
   const stops = holo.map((c, i) => `<stop offset="${(i / (holo.length - 1)).toFixed(2)}" stop-color="${c}"/>`).join("");
-  const cta = LANG === "en" ? "Contact" : "İletişim";
   return `<defs>
 <linearGradient id="holo" x1="0" y1="0" x2="1" y2="1" spreadMethod="reflect">${stops}<animateTransform attributeName="gradientTransform" type="translate" values="-0.6 -0.3;0.6 0.3;-0.6 -0.3" dur="6s" repeatCount="indefinite"/></linearGradient>
 <linearGradient id="holoSoft" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">${stops}<animateTransform attributeName="gradientTransform" type="translate" values="-0.5 0;0.5 0;-0.5 0" dur="7s" repeatCount="indefinite"/></linearGradient>
 <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.62" stop-color="#05050b" stop-opacity="0"/><stop offset="1" stop-color="#05050b" stop-opacity="0.55"/></linearGradient>
 <clipPath id="ph"><rect x="10" y="10" width="220" height="190" rx="20"/></clipPath>
-<clipPath id="av"><circle cx="32" cy="228" r="16"/></clipPath>
 <radialGradient id="cardGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7a95ff" stop-opacity="0.35"/><stop offset="0.6" stop-color="#d875ff" stop-opacity="0.14"/><stop offset="1" stop-color="#d875ff" stop-opacity="0"/></radialGradient>
 </defs>
 <g transform="translate(844 183)">
@@ -94,13 +92,11 @@ function photoCard() {
 <rect x="-90" y="0" width="70" height="220" fill="url(#shine)" transform="skewX(-18)"><animate attributeName="x" values="-90;330;330" keyTimes="0;0.45;1" dur="4.5s" repeatCount="indefinite"/></rect>
 </g>
 <rect x="10" y="10" width="220" height="190" rx="20" fill="none" stroke="url(#holoSoft)" stroke-opacity="0.55"/>
-<circle cx="32" cy="228" r="18.5" fill="url(#holo)"/>
-<image x="16" y="212" width="32" height="32" preserveAspectRatio="xMidYMid slice" clip-path="url(#av)" href="data:image/jpeg;base64,${b64("me-mini.jpg")}"/>
-<text x="58" y="224" font-family="${SANS}" font-size="13" font-weight="700" fill="${C.text}">whodenur_</text>
-<text x="58" y="239" font-family="${MONO}" font-size="9.5" fill="${C.muted}">@sudenurozturk</text>
-<rect x="158" y="216" width="66" height="24" rx="12" fill="url(#holoSoft)"/>
-<rect x="159" y="217" width="64" height="22" rx="11" fill="${C.bg}" fill-opacity="0.82"/>
-<text x="191" y="232" text-anchor="middle" font-family="${MONO}" font-size="10.5" font-weight="700" fill="${C.text}">${cta}</text>
+<rect x="10" y="211" width="220" height="34" rx="17" fill="url(#holoSoft)"/>
+<rect x="11.5" y="212.5" width="217" height="31" rx="15.5" fill="${C.bg}" fill-opacity="0.9"/>
+<rect x="68" y="220" width="18" height="18" rx="4" fill="#0a66c2"/>
+<text x="77" y="233.5" text-anchor="middle" font-family="${SANS}" font-size="12" font-weight="700" fill="#fff">in</text>
+<text x="96" y="233" font-family="${MONO}" font-size="12" font-weight="700" fill="${C.text}">LinkedIn</text>
 </g></g></g></g>`;
 }
 
