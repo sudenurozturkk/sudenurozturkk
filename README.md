@@ -1,44 +1,57 @@
+<p align="right"><b>EN</b> · <a href="README.tr.md">TR</a></p>
+
 <p align="center">
-  <img src="hero.png" alt="Sudenur Öztürk — kırılma haritası" width="100%">
+  <img src="dist/banner.svg" alt="Sudenur Öztürk — whoami" width="100%">
 </p>
 
 <p align="center">
-  <img src="dist/seismo.svg" alt="Katkı sismografı" width="100%">
+  <img src="dist/seismo.svg" alt="Contribution seismograph" width="100%">
 </p>
 
-### Hakkımda
+<p align="center">
+  <a href="https://www.sudenurozturk.tr"><img src="dist/btn-portfolio.svg" alt="sudenurozturk.tr"></a>
+  <a href="https://www.whodenur.com"><img src="dist/btn-whodenur.svg" alt="whodenur.com"></a>
+  <a href="https://linkedin.com/in/sudenurozturk"><img src="dist/btn-linkedin.svg" alt="LinkedIn"></a>
+</p>
 
-Yazılım mühendisliği öğrencisiyim (Fırat Üniversitesi). Yapay zekâ ürünleri geliştiriyorum, siber güvenlikle uğraşıyorum; sistemlerin nasıl çalıştığıyla ve **nerede kırıldığıyla** ilgileniyorum. İlk CTF'imi SQL injection ile çözdüm.
+<img src="dist/h-about.svg" alt="// 01 — about" width="100%">
 
-> *"Bu neden böyle? Peki ya şöyle olursa ne olur?"*
+I'm a software engineering student at Fırat University. I build AI products and dig into cybersecurity; I'm curious how systems actually work and **where they break**. I solved my first CTF with SQL injection.
 
-**Şu an:** yazılım stüdyom [Whodenur](https://www.whodenur.com)'u kuruyorum · yapay zekâ ve güvenlik üzerine çalışıyorum
+**Right now:** building my software studio [Whodenur](https://www.whodenur.com) · working on AI and security
 
-### Projeler
+<img src="dist/h-projects.svg" alt="// 02 — projects" width="100%">
 
-| Proje | Ne yapıyor | Teknoloji |
-|---|---|---|
-| **GENÇ İHH Raporlama** | AI destekli saha raporlama: rol bazlı erişim, değiştirilemez rapor arşivi, Türkiye haritası, AI özetleri. İHH ATOM Hackathon | Next.js 16 · React 19 · Prisma · PostgreSQL · Claude |
-| **CampaignCell** | Kişiselleştirilmiş kampanya platformu, 4 mikroservis + API Gateway, segmentasyon ve dönüşüm tahmini. Turkcell CodeNight All Star | NestJS · FastAPI · RabbitMQ · scikit-learn · Docker |
-| **İlaç Rehberi Asistanı** | Tamamen offline RAG ilaç rehberi: hibrit arama, zorunlu kaynak gösterimi, sesli soru, etkileşim kontrolü. Microsoft stajı | Next.js 15 · SQLite · Foundry Local · Whisper |
-| **SürüCep** | Küçük besiciler için offline-first PWA: aşı, doğum, tedavi, süt kaydı ve ilaçlı sütün satışını engelleyen uyarılar | React · TypeScript · PWA |
-| **KulüpOS** | Hacktoberfest Elazığ 2026 için tek başıma geliştirdiğim kulüp yönetim uygulaması | Gemma (açık model) |
-| **AI Finans Asistanı** | Anomali tespiti, 30 günlük tahmin, senaryo simülasyonu yapan agentic finans danışmanı | Next.js · Gemini · TypeScript |
-| **SmartRentVault** | 48 saatte yazılan merkeziyetsiz kira/depozito dApp'i: escrow, puanlama, cüzdan entegrasyonu. HackStellar | Rust · Soroban · Stellar · React |
-| **DiyetPro** | Diyetisyen hasta takip masaüstü uygulaması; hazır framework olmadan katmanlı mimari ve kendi DI container'ı | C# · .NET 4.8 · DevExpress · MySQL |
-| **FitTurkAI** | Türkçe sağlık ve fitness takip asistanı | Next.js · FastAPI · Hugging Face |
-| **QR Menü** | Diyarbakır'da bir kafe için gönüllü dijital menü | HTML · CSS · JavaScript |
+<p align="center">
+  <a href="https://genc-ihh-raporlama-kpjy-iota.vercel.app/login"><img src="dist/card-genc-ihh-raporlama.svg" alt="GENÇ İHH Reporting" width="49%"></a>
+  <a href="https://surucep.vercel.app/"><img src="dist/card-surucep.svg" alt="SürüCep" width="49%"></a>
+  <a href="https://github.com/sudenurozturkk/campaigncell"><img src="dist/card-campaigncell.svg" alt="CampaignCell" width="49%"></a>
+  <a href="https://github.com/sudenurozturkk/ilacasistani"><img src="dist/card-ilac-rehberi.svg" alt="Medication Guide Assistant" width="49%"></a>
+  <a href="https://github.com/sudenurozturkk/kulupos"><img src="dist/card-kulupos.svg" alt="KulüpOS" width="49%"></a>
+  <a href="https://github.com/sudenurozturkk/KisiselAiFinansAsistani"><img src="dist/card-ai-finans-asistani.svg" alt="AI Finance Assistant" width="49%"></a>
+  <a href="https://github.com/sudenurozturkk/SMARTRENTVAULT"><img src="dist/card-smartrentvault.svg" alt="SmartRentVault" width="49%"></a>
+  <a href="https://github.com/sudenurozturkk/DiyetisyenOtomasyonu"><img src="dist/card-diyetpro.svg" alt="DiyetPro" width="49%"></a>
+  <a href="https://github.com/FitTurkAI/FitTurkAI"><img src="dist/card-fitturkai.svg" alt="FitTurkAI" width="49%"></a>
+  <a href="https://sudenurozturkk.github.io/dortayaklikafe/"><img src="dist/card-qr-menu.svg" alt="QR Menu" width="49%"></a>
+</p>
 
-### Yol haritası
+<img src="dist/h-journey.svg" alt="// 03 — journey" width="100%">
 
-- **2026** · Erasmus+ Polonya (Częstochowa) · Microsoft AI Innovators stajı · BTK stajı · CodeNight All Star finali · İHH ATOM Hackathon · SummerBytes saldırgan güvenlik kampı · Erasmus+ Muş projesi
-- **2025** · Paribu Codex 4.'lüğü · CodeNight Diyarbakır 2.'liği · HackStellar · MCP Bootcamp · AI Security eğitimi · FÜBET etkinlik koordinatörlüğü
-- **2025 başı** · GSB Yapay Zekâ Kış Kampı, ByteGirls takım kaptanı (20 takım arasında ilk 8)
+<p align="center">
+  <img src="dist/journey.svg" alt="Journey: internships, hackathons, competitions" width="100%">
+</p>
 
-### Araç çantası
+<img src="dist/h-stack.svg" alt="// 04 — stack" width="100%">
 
-`TypeScript` `Next.js` `React` `Python` `Java` `C# / .NET` `Rust` `PostgreSQL` `Docker` `RabbitMQ` `RAG / LLM` `Hugging Face` `OWASP` `CTF`
+<p align="center">
+  <img src="dist/stack.svg" alt="TypeScript, Next.js, React, Python, Java, C#, Rust, PostgreSQL, Docker, RAG/LLM, OWASP, CTF" width="100%">
+</p>
 
-### İletişim
+<img src="dist/h-contact.svg" alt="// 05 — contact" width="100%">
 
-[sudenurozturk.tr](https://www.sudenurozturk.tr) · [whodenur.com](https://www.whodenur.com) · [Hugging Face](https://huggingface.co/sudenurozturk) · [LinkedIn](https://linkedin.com/in/sudenurozturk) · whodenur@gmail.com
+<p align="center">
+  <a href="https://www.sudenurozturk.tr"><img src="dist/btn-portfolio.svg" alt="sudenurozturk.tr"></a>
+  <a href="https://www.whodenur.com"><img src="dist/btn-whodenur.svg" alt="whodenur.com"></a>
+  <a href="https://linkedin.com/in/sudenurozturk"><img src="dist/btn-linkedin.svg" alt="LinkedIn"></a>
+  <a href="mailto:whodenur@gmail.com"><img src="dist/btn-mail.svg" alt="whodenur@gmail.com"></a>
+</p>

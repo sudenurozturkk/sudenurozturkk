@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="159" height="44" viewBox="0 0 159 44" role="img" aria-label="whodenur.com">
+<title>whodenur.com</title>
+<defs><linearGradient id="pl38" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect"><stop offset="0" stop-color="#f07aa6"/><stop offset="0.5" stop-color="#a78bfa"/><stop offset="1" stop-color="#4ade80"/>
+<animateTransform attributeName="gradientTransform" type="translate" values="-0.4 0;0.4 0;-0.4 0" dur="6s" repeatCount="indefinite"/></linearGradient></defs>
+<rect x="1" y="1" width="157" height="42" rx="21" fill="#0c0c16" stroke="url(#pl38)" stroke-width="1.6"/>
+<circle cx="22" cy="22" r="4" fill="#a78bfa"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></circle>
+<text x="36" y="27" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="14" fill="#ececf4" textLength="105" lengthAdjust="spacingAndGlyphs">whodenur.com</text>
+</svg>
